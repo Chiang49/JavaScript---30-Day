@@ -11,7 +11,9 @@ const secretCode = 'wasabi';
 window.addEventListener('keyup', (e) => {
   enterKey.push(e.key);
   enterKey.splice(- enterKey.length - 1, (enterKey.length - secretCode.length));
+  // 刪除陣列第一筆資料，新增資料在陣列最後
   if (enterKey.join('').includes(secretCode)) {
+    // 陣列資料合併並判斷是否包含特定的元素
     console.log('bingGo');
     cornify_add();
   }
